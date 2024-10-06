@@ -1,7 +1,7 @@
 name: Read me Checker 
 
 on:
- pull_reuest:
+ push:
    branches:
     - main 
 
