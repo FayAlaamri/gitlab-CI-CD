@@ -1,0 +1,17 @@
+stages:
+  - build
+  - deploy
+
+# Build Stage: Build the Docker image
+build:
+  stage: build
+  script:
+    - docker build -t myapp:latest .
+
+# Deploy Stage: Deploy to a platform (optional step or deploy to container registry)
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the application..."
+    # If you're deploying to Heroku, AWS, or DockerHub, you would put commands here.
+    # For demo purposes, we can keep this simple.
