@@ -1,0 +1,15 @@
+name: Read me Checker 
+
+on:
+ pull_reuest:
+   branches:
+    - main 
+
+jobs:
+  first-job:
+   runs-on: ubuntu-latest
+   steps:
+      -uses: actions/checkout@v2
+      -name:
+        run: 
+           find . -name 'README' -exec head -1 {} \;
