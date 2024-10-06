@@ -11,5 +11,8 @@ jobs:
    steps:
       -uses: actions/checkout@v2
       -name:
-        run: 
-           find . -name 'README' -exec head -1 {} \;
+        run: |
+           ls -ali
+           if [! -f README.md ]; then 
+           exit 1 
+           fi
